@@ -124,10 +124,10 @@ updateProductTable(); //cập nhật lại danh mục sản phẩm
 
 function updateProductTable() {
   let table = document.getElementById("producttable");
-
+  let rowCount = table.rows.length
   // xóa tất cả các hàng trong bảng
-  while (table.ariaRowSpan.length > 1) {
-    table.deleteRow(1);
+ for ( let i = rowCount - 1; i >= 1; i--) {
+    table.deleteRow(i);
   }
 
   // Thêm lại tất cả các sản phẩm từ productList
